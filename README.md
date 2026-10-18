@@ -20,7 +20,7 @@
 <p align="center">
   <a href="https://docklark.com/download/"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon-20312a?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="Target platform: macOS on Apple Silicon"></a>
   <a href="https://docklark.com/features/"><img src="https://img.shields.io/badge/SSH-%2B%20JumpServer-52723a?style=flat-square" alt="SSH and JumpServer"></a>
-  <a href="https://github.com/HarryAIDev/Docklark/releases"><img src="https://img.shields.io/badge/status-in%20development-b78b35?style=flat-square" alt="In development; no public release yet"></a>
+  <a href="https://github.com/HarryAIDev/Docklark/releases"><img src="https://img.shields.io/badge/release-v0.2.60-287a52?style=flat-square" alt="v0.2.60 installer available"></a>
 </p>
 
 <p align="center">
@@ -91,15 +91,17 @@ SFTP and host monitoring address the SSH entry host; they do not follow a nested
 
 ## Download & installation
 
-**The first public release is still being prepared. No public installer is available yet.**
+**[Docklark v0.2.60](https://github.com/HarryAIDev/Docklark/releases/tag/v0.2.60) is available for Apple Silicon (arm64), published October 18, 2026.**
+
+Download the DMG and its SHA-256 checksum from the release page. Development progress describes main-source changes and does not establish which features this installer contains.
 
 - **Target platform:** macOS on Apple Silicon
-- **System requirements:** the minimum macOS version will be confirmed with the public release; Intel support has not been announced
+- **System requirements:** minimum macOS compatibility has not been independently verified; no Intel installer is provided in this release
 - **Release information:** check [GitHub Releases](https://github.com/HarryAIDev/Docklark/releases) and the [official release-status page](https://docklark.com/download/) for availability and installation instructions
 
 ## Getting ready
 
-While the first release is being prepared, explore the connection guides:
+Before connecting, explore the connection guides:
 
 1. [Prepare a direct SSH connection](https://docklark.com/docs/ssh/): host, port, account, network access, and host-key checks.
 2. [Connect through JumpServer](https://docklark.com/docs/jumpserver/): the bastion entry point, authentication requirements, and authorized assets.

@@ -20,7 +20,7 @@
 <p align="center">
   <a href="https://docklark.com/zh/download/"><img src="https://img.shields.io/badge/macOS-Apple%20Silicon-20312a?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="目标平台：macOS · Apple Silicon"></a>
   <a href="https://docklark.com/zh/features/"><img src="https://img.shields.io/badge/SSH-%2B%20JumpServer-52723a?style=flat-square" alt="SSH 与 JumpServer"></a>
-  <a href="https://github.com/HarryAIDev/Docklark/releases"><img src="https://img.shields.io/badge/status-in%20development-b78b35?style=flat-square" alt="开发中，尚未公开发布"></a>
+  <a href="https://github.com/HarryAIDev/Docklark/releases"><img src="https://img.shields.io/badge/release-v0.2.60-287a52?style=flat-square" alt="v0.2.60 安装包可下载"></a>
 </p>
 
 <p align="center">
@@ -91,15 +91,17 @@ SFTP 与主机监控作用于 SSH 入口主机，不会跟随嵌套 SSH 或 Jump
 
 ## 下载与安装
 
-**首个公开版本仍在准备中，目前尚无公开安装包。**
+**[Docklark v0.2.60](https://github.com/HarryAIDev/Docklark/releases/tag/v0.2.60) 已于 2026 年 10 月 18 日提供 Apple Silicon（arm64）安装包。**
+
+请在版本页面下载 DMG 及其 SHA-256 校验文件。开发进展描述的是 main 源码变化，不代表已确认这些功能均包含在此安装包中。
 
 - **目标平台：** macOS · Apple Silicon
-- **系统要求：** 最低 macOS 版本将在公开发布时确认；Intel 支持尚未公布
+- **系统要求：** 最低 macOS 兼容性尚未独立验证；此版本未提供 Intel 安装包
 - **版本信息：** 请通过 [GitHub Releases](https://github.com/HarryAIDev/Docklark/releases) 与[官方版本页面](https://docklark.com/zh/download/)查看下载状态和安装说明
 
 ## 连接前的准备
 
-等待首个公开版本期间，可以先了解连接所需的信息：
+连接前，可以先了解所需的信息：
 
 1. [准备直连 SSH](https://docklark.com/zh/docs/ssh/)：确认主机、端口、账号、网络条件与主机指纹。
 2. [通过 JumpServer 连接](https://docklark.com/zh/docs/jumpserver/)：确认堡垒机入口、认证要求与目标资产权限。
