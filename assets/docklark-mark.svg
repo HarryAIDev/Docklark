@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96" viewBox="0 0 40 40" fill="none" role="img" aria-labelledby="title">
+  <title id="title">Docklark</title>
+  <rect width="40" height="40" rx="12" fill="#20312a"/>
+  <path d="m10 12 9 8-9 8m12-1h9" stroke="#d4ef87" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m24 10 7 5-7 2" fill="#d4ef87"/>
+</svg>
