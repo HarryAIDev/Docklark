@@ -1,81 +1,101 @@
 <p align="center"><strong>English</strong> · <a href="README.zh-CN.md">简体中文</a></p>
 <p align="center"><a href="https://docklark.com/"><img src="assets/docklark-mark.svg" width="80" height="80" alt="Docklark logo"></a></p>
-<h1 align="center">Docklark — SSH client for Mac</h1>
-<p align="center">A native SSH workspace for Apple Silicon.<br>Organize connections, work across sessions, and keep SFTP beside your terminal.</p>
-<p align="center"><a href="https://github.com/HarryAIDev/Docklark/releases/latest"><strong>Download for Apple Silicon</strong></a> · <a href="https://docklark.com/features/">Explore features</a> · <a href="https://docklark.com/docs/">Read the docs</a></p>
-<p align="center"><a href="https://github.com/HarryAIDev/Docklark/releases"><img src="https://img.shields.io/badge/release-v0.2.61-287a52?style=flat-square" alt="Docklark v0.2.61 installer"></a> <img src="https://img.shields.io/badge/macOS-Apple%20Silicon-20312a?style=flat-square&amp;logo=apple&amp;logoColor=white" alt="macOS on Apple Silicon"></p>
+<h1 align="center">Docklark — SSH & operations workspace for Mac</h1>
+<p align="center">Connections, terminals, files and host tools in one native workspace.<br>Built for Apple Silicon. Completely free, with no purchase or subscription.</p>
+<p align="center"><a href="https://github.com/HarryAIDev/Docklark/releases/latest"><strong>Download for Mac</strong></a> · <a href="https://docklark.com/features/">All features</a> · <a href="https://docklark.com/docs/">Documentation</a> · <a href="https://docklark.com/roadmap/">Development progress</a></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="assets/en-workspace-dark.webp"><img src="assets/en-workspace-light.webp" width="100%" alt="Docklark Mac SSH workspace with tabs and terminal controls, reconstructed with fictional demo data"></picture></p>
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/native-en-workspace-dark.webp"><img src="https://docklark.com/assets/product/native-en-workspace-light.webp" width="100%" alt="Docklark operations workspace: terminal, connections, remote files and resource history"></picture></p>
 
-> Interface previews are reconstructions using fictional demo data. Features below describe development progress; they are not proof that every workflow has passed real-world testing or is included in a particular installer. See the [release notes](https://github.com/HarryAIDev/Docklark/releases) and [development progress](https://docklark.com/roadmap/).
+Docklark grew out of moving from Windows to macOS and wanting the organized remote-work experience Harry enjoyed in Xshell. It brings saved connections, flexible sessions, file transfers and routine host operations into one Mac application.
 
-## One workspace for everyday SSH work
+> The website's October 27, 2026 review covers the installed v0.2.96 app (build 106). Screenshots are actual English/Chinese, light/dark app captures using public demo data, not production sessions. Interface review and a local sample upload do not certify every authentication method, remote write, container action, forwarding rule or server environment. The [feature page](https://docklark.com/features/#review-scope) explains the review scope; the roadmap records development history, not an installer acceptance checklist.
 
-Docklark grew out of moving from Windows to macOS and wanting a familiar, organized remote-work workflow. It brings connection management, terminal sessions, and file browsing into a native Mac interface.
+## What you can do
 
-- **Find the right connection:** saved SSH hosts, folders, favorites, and search; direct SSH and JumpServer entry points.
-- **Keep related work together:** tabs, nested splits, and separate windows.
-- **Move between commands and files:** dual-pane SFTP browsing with a transfer queue, progress, and cancellation.
-- **Reuse commands deliberately:** saved commands and a shared command bar with selectable session targets.
-- **Make the workspace yours:** light and dark appearances, terminal palettes, English and Simplified Chinese.
+### Organize connections and return to your workspace
 
-## A closer look
+- **Connection library:** nested folders with inherited colors, search, favorites, duplication, batch moves and property editing, plus non-sensitive connection templates.
+- **SSH access:** password or private-key authentication, JumpServer entry, managed SSH jump chains, keep-alive, compression and forwarding options. Passwords use macOS Keychain; host fingerprints and authentication prompts still need confirmation.
+- **Flexible sessions:** tabs, resizable nested splits and multiple windows. Move connected sessions between panes and windows, switch terminal/operations layouts, and dock favorites or quick commands to any edge.
+- **Saved workspaces:** save named multi-window layouts and restore them after restart as pending sessions, then connect manually. Snapshots exclude terminal output, drafts and passwords.
+- **Portable configuration:** Docklark JSON import/export and local SSH-key management. Ordinary exports omit passwords; optional passphrase-protected backups can include saved passwords, but not private-key contents or one-time codes. This is not cloud sync or Xshell-format import.
 
-### 1. Start with organized connections
+### Work with commands and terminal output
 
-Keep frequently used connections in folders and use search or favorites to find them. Prepare the host, port, account, authentication method, and host-key fingerprint before connecting.
+- **Shared command bar:** choose the active session or explicit SSH recipients, review their window origins and availability, then send. Enter sends; Shift+Enter adds a line. Local shells are excluded from whole-window SSH scopes.
+- **Quick commands:** groups, ordering, `{{name}}` parameters and drag-to-terminal actions. Reuse this app run's history with Ctrl+R; Tab fills command or confirmed remote-path candidates without executing them. Marked dangerous commands ask for confirmation.
+- **Terminal find:** search the current tab or the window's tabs and split panes, with regex, case matching and wrap-around navigation. Switch between inline and detached find without losing search state.
+- **Persistent highlights and output alerts:** ordered text/regex rules, foreground/background previews and global, connection or session scopes. Optional notifications show session/rule names rather than matched terminal text; alerts do not execute commands.
+- **Shell integration:** navigate command prompts, select the latest command output and inspect exit codes, with configurable key behavior and scrollback. Remote Bash/Zsh integration requires setup; it does not infer a changed target host.
+- **Local-shell continuity:** keep the tab and retained output when SSH ends, then continue in a local shell.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/en-connections-dark.webp"><img src="https://docklark.com/assets/product/en-connections-light.webp" width="100%" alt="Saved SSH connections in folders with search and favorites"></picture></p>
+Search covers retained output, not unlimited history. Review command recipients before sending: multi-session delivery is not an atomic server transaction. Explicit sensitive snippets use Keychain and send to one terminal only, without Return or broadcast.
 
-[SSH setup guide](https://docklark.com/docs/ssh/) · [JumpServer guide](https://docklark.com/docs/jumpserver/)
+### Transfer files and edit remote text
 
-### 2. Work across sessions
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/native-en-sftp-dark.webp"><img src="https://docklark.com/assets/product/native-en-sftp-light.webp" width="100%" alt="Docklark native dual-pane SFTP window and transfer queue with demo files"></picture></p>
 
-Use tabs for separate tasks and splits for side-by-side terminal work. Save recurring diagnostic commands in the quick command manager shown below. Choose the recipients in the shared command bar before sending a command to multiple sessions.
+- **Embedded or separate SFTP:** local/remote browsing, file and directory transfers, hidden files and empty folders, rename, new folders and path copying.
+- **Transfer queue:** 1–5 concurrent files (3 by default), task cancellation, retry, reveal-file and result-copy actions. Overlapping paths run in order; conflicting names are saved under new names rather than overwritten or merged.
+- **Shell directory following:** after shell integration and same-host confirmation, follow terminal directory changes in the file panel.
+- **Remote text editor:** line numbers, find/replace, go-to-line, a diff before saving, remote-change conflict checks and supported encoding preservation. Text is limited to 2 MiB; servers without atomic replacement offer Save As. Unsaved drafts remain available read-only after disconnection.
+- **Terminal `rz` / `sz`:** ZMODEM uploads/downloads with a separate progress window, where the target provides compatible tools and allows the protocol. Each file must be smaller than 4 GiB.
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/en-commands-dark.webp"><img src="https://docklark.com/assets/product/en-commands-light.webp" width="100%" alt="Reusable diagnostic commands in the quick command manager"></picture></p>
+SFTP requires an allowed SFTP v3 subsystem. It does not follow symbolic links or device files, delete non-empty directories, or resume transfers across connections.
 
-### 3. Keep SFTP beside your terminal
+### Observe hosts and use the tool center
 
-Browse local and remote folders without leaving the workspace. Review the destination and transfer queue before uploading or downloading.
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/native-en-tools-dark.webp"><img src="https://docklark.com/assets/product/native-en-tools-light.webp" width="100%" alt="Docklark tool center with a multi-host overview and session tools"></picture></p>
 
-<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/en-sftp-dark.webp"><img src="https://docklark.com/assets/product/en-sftp-dark.webp" width="100%" alt="Dual-pane SFTP browser and transfer queue using fictional demo folders"></picture></p>
+- **Resource monitoring:** CPU, memory, swap, network rates and disk space, Top 5 processes and 1/5/15-minute history charts. Linux/macOS collectors use an independent SSH command channel without a remote agent or sudo; macOS memory is an estimate. Refresh defaults to 5 seconds and can be paused or set from 1–3600 seconds.
+- **Multi-host overview:** table/card views with shortcuts to the selected host's terminal, resources, files and tools.
+- **Process management:** search and inspect remote processes, with confirmation before requesting termination.
+- **Docker tools:** container status, images, ports, supported metrics, recent logs, start/stop/restart controls and separate container-terminal tabs, subject to the remote Docker environment and permissions.
+- **Forwarding:** named local, remote and dynamic SOCKS rules that can start with a session or be controlled independently without disconnecting SSH.
 
-**Connection boundary:** SFTP and CPU/memory monitoring address the SSH entry host. They do not follow a nested SSH connection or a target asset selected inside JumpServer. Check the [feature details](https://docklark.com/features/) before choosing a workflow.
+**Know which host you are operating on.** SFTP, monitoring and host tools use the SSH entry host, or the final authenticated host of a managed jump chain. They do not follow nested `ssh` commands or assets selected from a JumpServer menu. Remote exec/SFTP/Docker permissions and workflow-specific validation still apply; real remote macOS metrics remain under validation.
+
+### Repeat steps, keep records and customize the interface
+
+- **Step workflows:** manually run or single-step commands, text/regex output waits, sensitive-input prompts and pauses, with step timeouts and confirmation for marked dangerous steps. Workflows bind to one session; disconnecting, reconnecting or starting a transfer stops them. They are not unattended schedulers or multi-server transactions.
+- **Session output logs:** off by default; start, pause, resume or stop UTF-8 recording, add optional timestamps, then search/copy/export. A connection can opt into recording after authentication. Ordinary remote output may contain secrets: pause before sensitive work and review exports.
+- **Diagnostics:** separate local INFO/DEBUG logs, changeable without restart and exportable for troubleshooting. These exclude terminal text, commands, passwords, private keys and file contents, and are not uploaded automatically. Review runtime metadata before sharing.
+- **Appearance:** English and Simplified Chinese; system, light or dark interface; 13 terminal palettes, theme previews/search/favorites, JSON and `.itermcolors` import, JSON export, custom colors, global or per-session fonts and appearance. Background opacity and frosted glass are independently adjustable.
+
+<p align="center"><picture><source media="(prefers-color-scheme: dark)" srcset="https://docklark.com/assets/product/native-en-themes-dark.webp"><img src="https://docklark.com/assets/product/native-en-themes-light.webp" width="100%" alt="Docklark native theme center with terminal palette previews"></picture></p>
 
 ## Download and get started
 
-[Docklark v0.2.61](https://github.com/HarryAIDev/Docklark/releases/tag/v0.2.61) provides an Apple Silicon (arm64) DMG, published October 18, 2026.
+**[v0.2.96](https://github.com/HarryAIDev/Docklark/releases/tag/v0.2.96) · Published October 27, 2026 · Apple Silicon (arm64)**
 
-1. Open the release page and download the DMG and its SHA-256 checksum file.
-2. Verify the checksum, then follow the [installation guide](https://docklark.com/download/).
-3. Prepare an authorized SSH account and confirm the server's host-key fingerprint through a trusted channel.
-4. Add a connection and start with one session before trying split panes or multi-session commands.
+[DMG installer](https://github.com/HarryAIDev/Docklark/releases/download/v0.2.96/Docklark_0.2.96_2026.10.27_arm64.dmg) · [SHA-256 checksum](https://github.com/HarryAIDev/Docklark/releases/download/v0.2.96/Docklark_0.2.96_2026.10.27_arm64.dmg.sha256) · [Latest release](https://github.com/HarryAIDev/Docklark/releases/latest)
 
-This release does not provide an Intel installer. Minimum macOS compatibility, signing, and notarization should not be assumed from the download alone; consult the release notes and installation guide. Never disable system security globally to open a download.
+1. Download the DMG and matching checksum into the same folder. In Terminal, change to that folder and verify:
 
-## Common questions
+   ```sh
+   shasum -a 256 -c Docklark_0.2.96_2026.10.27_arm64.dmg.sha256
+   ```
 
-**Does macOS already include SSH?**  
-Yes. Terminal's `ssh` command is useful for a quick connection. Docklark focuses on a graphical workflow for saved connections, multiple sessions, and SFTP.
+2. Open the DMG and copy Docklark into Applications following its installer layout. Keep macOS security protections enabled.
+3. Prepare an authorized SSH account and confirm the host-key fingerprint through a trusted channel.
+4. Add a connection and begin with one session before trying multi-session commands or management actions.
 
-**Is this an SFTP client for Mac too?**  
-SFTP browsing and transfer controls are part of Docklark's development feature set. The SSH entry-host boundary above applies; validate your own connection and file-transfer workflow before relying on it.
+The developer reports testing on **macOS 27**; earlier versions have not been tested. This release provides no Intel installer. Developer ID signing and notarization have not been independently verified; a matching checksum verifies file integrity, not publisher identity. See the [download and installation guide](https://docklark.com/download/) for current information.
 
-**Is Docklark open source?**  
-This repository hosts public releases, documentation, and feedback. The application source code is not published here. GitHub's automatically generated source archives contain this repository's documentation and assets, not the application source.
+## Documentation and project status
 
-**Where can I learn more?**  
-Start with the [documentation](https://docklark.com/docs/) and [feature overview](https://docklark.com/features/). The [roadmap](https://docklark.com/roadmap/) records daily feature progress rather than a guarantee of installer contents.
+- [Getting started and settings](https://docklark.com/docs/) · [SSH connection guide](https://docklark.com/docs/ssh/) · [JumpServer guide](https://docklark.com/docs/jumpserver/)
+- [Complete features and workflow limits](https://docklark.com/features/) · [Daily feature progress](https://docklark.com/roadmap/)
+- [SSH client for Mac](https://docklark.com/ssh-client-for-mac/) · [SFTP client for Mac](https://docklark.com/sftp-client-for-mac/) · [Practical articles](https://docklark.com/blog/) · [About Docklark](https://docklark.com/about/)
 
-## Guides for Mac SSH and SFTP
+Docklark is in active early development, with frequent updates initially and stage-based releases as it matures. Use the official website for detailed guidance and Releases for available installers.
 
-[Choosing an SSH client for Mac](https://docklark.com/ssh-client-for-mac/) · [SFTP client for Mac](https://docklark.com/sftp-client-for-mac/) · [Practical SSH articles](https://docklark.com/blog/)
-
-See the [illustrated workflow on the website](https://docklark.com/). It is a pausable interface explanation, not a recording of a live server session.
+**This is the public release, documentation and feedback repository, not the application source repository.** GitHub's automatically generated source archives contain this repository's documentation and assets, not the application source code.
 
 ## Feedback
 
-[Open an issue](https://github.com/HarryAIDev/Docklark/issues) or contact [Harry on X](https://x.com/HarryAIDev). Include the application version, macOS version, reproduction steps, and expected result. Remove passwords, private keys, tokens, sensitive host details, and personal file paths before sharing screenshots or logs.
+[Open an issue](https://github.com/HarryAIDev/Docklark/issues) or contact [Harry on X](https://x.com/HarryAIDev). Include the app version, macOS version, reproduction steps and expected result. Remove passwords, private keys, tokens, sensitive host details and personal file paths from screenshots and logs.
 
-<p align="center">Built by Harry, inspired by everyday remote work.<br><a href="https://docklark.com/">docklark.com</a></p>
+Docklark is an independent project. Xshell is a trademark of NetSarang Computer, Inc.; Docklark is not affiliated with, sponsored by or endorsed by NetSarang.
+
+<p align="center">Built by Harry for everyday remote work.<br><a href="https://docklark.com/">docklark.com</a></p>
